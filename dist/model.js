@@ -18,7 +18,7 @@ class WeatherModel {
     try {
       const response = await fetch(`/weather/${cityName}`);
       const cityData = await response.json();
-      console.log(cityData.type)
+      //console.log(cityData.type)
       this.cities.push(cityData)
 
 

@@ -26,8 +26,8 @@ router.get('/weather/:cityName', async function (req, res) {
         conditionPic: `https://openweathermap.org/img/wn/${responseData.weather[0].icon}.png`
     }
 
-    // const weather = new Weather (data);
-    // weather.save();
+    const weather = new Weather (data);
+    weather.save();
   
     res.status(200).json(data);
   });

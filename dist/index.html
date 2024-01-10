@@ -35,14 +35,15 @@
                               <script id="weather-template" class="weather-card" type="text/x-handlebars-template">
                                  {{#each this}}
                                     <div class="temp">{{temperature}} &deg;</div>
-                                    <div class="location">{{name}}</div>
+                                    <div class="location" id="name">{{name}}</div>
                                     <div class="condition"> {{condition}}</div>
                                     <img src="{{conditionPic}}">  
-                                    <button  class="btn btn-success save-button" data-city="{{name}}" onclick="save()">Save</button>
-                                    <button class="btn btn-danger remove-button" data-city="{{name}}" onclick="remove()" >Remove</button>
+                                 
                                  {{/each}}
                               </script>
                               <div class="weather"></div>
+                              <button  class="btn btn-success save-button" data-city="{{name}}" onclick="save()">Save</button>
+                              <button class="btn btn-danger remove-button" data-city="{{name}}" onclick="remove()" >Remove</button>
                            </div>
                         </div>
                      </div>
@@ -51,15 +52,6 @@
         </div>
     </div>
 
-
-    <button class="save-button">Save</button>
-    <button class="remove-button">Remove</button>
-
-    <div class="background-container">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
-        <div class="stars"></div>
-        <div class="twinkling"></div>
-        <div class="clouds"></div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

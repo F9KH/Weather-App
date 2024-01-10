@@ -8,11 +8,6 @@ async function renderSavedData() {
 }
 
 
-// async function renderCityWeather(cityName) {
-//     const cityData = await weatherModel.getCityData(cityName);
-//     renderer.display(cityData);
-// }
-
 async function search (){
     const input = $("#searchInput").val(); 
      await weatherModel.getCityData(input);
@@ -29,18 +24,9 @@ async function save() {
 
 async function remove(){
     const cityName = $(".remove-button").data("city");
-    console.log(cityName)
     await weatherModel.deleteCity(cityName);
 
     alert(`Data for ${cityName} removed to the database successfully!`);
 }
-
-
-
-
-
-
-
-
 
 $(document).ready(renderSavedData);
