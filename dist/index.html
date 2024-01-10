@@ -34,16 +34,18 @@
                            <div class="col-6">
                               <script id="weather-template" class="weather-card" type="text/x-handlebars-template">
                                  {{#each this}}
+
                                     <div class="temp">{{temperature}} &deg;</div>
                                     <div class="location" id="name">{{name}}</div>
                                     <div class="condition"> {{condition}}</div>
                                     <img src="{{conditionPic}}">  
+                                    <button  class="btn btn-success save-button" data-city="{{name}}" onclick="save()">Save</button>
+                                    <button class="btn btn-danger remove-button" data-city="{{name}}" onclick="remove()" >Remove</button>
                                  
                                  {{/each}}
                               </script>
                               <div class="weather"></div>
-                              <button  class="btn btn-success save-button" data-city="{{name}}" onclick="save()">Save</button>
-                              <button class="btn btn-danger remove-button" data-city="{{name}}" onclick="remove()" >Remove</button>
+                
                            </div>
                         </div>
                      </div>
